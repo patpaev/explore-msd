@@ -66,21 +66,8 @@ export default class Html extends Component {
           {/* webfonts */}
           <script src="https://use.typekit.net/fpp4zlv.js"></script>
           <script dangerouslySetInnerHTML={{__html: "try{Typekit.load({ async: true });}catch(e){}"}} />
-          
-			<script type="text/javascript">
-			var utag_data = {
-			  ga_account_id : "", // Account ID for GA
-			}
-			</script>
 
-			<!-- Loading script asynchronously -->
-			<script type="text/javascript">
-				(function(a,b,c,d){
-				a='//tags.tiqcdn.com/utag/unimelb/main/prod/utag.js';
-				b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true;
-				a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);
-				})();
-			</script>
+<script dangerouslySetInnerHTML={{__html: "window.utag_data = {ga_account_id : ''}; (function(a,b,c,d){ a='//tags.tiqcdn.com/utag/unimelb/main/prod/utag.js';b=document;c='script';d=b.createElement(c);d.src=a;d.type='text/java'+c;d.async=true; a=b.getElementsByTagName(c)[0];a.parentNode.insertBefore(d,a);})();"}} />
 
         </body>
       </html>
